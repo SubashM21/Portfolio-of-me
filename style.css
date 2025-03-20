@@ -1,0 +1,294 @@
+:root {
+    --dark-grey: #171717;
+    --grey: #444444;
+    --violet: #d000ff;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo h2 {
+    font-size: 32px;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.nav-items {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-items li {
+    list-style: none;
+}
+
+.nav-items a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-items a:hover {
+    color: var(--violet);
+}
+
+.nav-btn {
+    background-color: var(--violet);
+    padding: 8px 16px;
+    border-radius: 50px;
+}
+
+.nav-btn a {
+    text-decoration: none;
+}
+
+/* Hero Section */
+.home {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url(./assets/WhatsApp\ Image\ 2025-03-16\ at\ 18.06.09_cb01ee74.jpg);
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100vh;
+    padding-left: 30px;
+}
+
+.first-text {
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+.big-text {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.third-text {
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.message-box {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.message-box input {
+    border: none;
+    width: 250px;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.submit-btn {
+    background-color: var(--violet);
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.submit-btn a {
+    text-decoration: none;
+}
+
+/* About Section */
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-grey);
+    padding: 40px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.pfp img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.about-me {
+    max-width: 600px;
+}
+
+.about-me h2 {
+    font-size: 32px;
+}
+
+.title-text {
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.about-me p {
+    line-height: 1.8;
+}
+
+.abt-btn {
+    background-color: var(--violet);
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.abt-btn a {
+    text-decoration: none;
+}
+
+/* Services Section */
+.third-page {
+    background-color: var(--grey);
+    padding: 40px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust for responsiveness */
+    gap: 20px;
+}
+
+.service-card {
+    background-color: var(--dark-grey);
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.service-card img {
+    margin-bottom: 10px;
+}
+
+.service-card .s-1 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.service-card .s-2 {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: var(--violet);
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.btn a {
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background-color: var(--grey);
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.footer-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* ✨✨ RESPONSIVENESS ✨✨ */
+
+/* Small Devices (phones) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-btn {
+        margin-top: 10px;
+    }
+
+    .big-text {
+        font-size: 48px;
+    }
+
+    .first-text, .third-text {
+        font-size: 18px;
+    }
+
+    .message-box {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .message-box input {
+        width: 100%;
+    }
+
+    .pfp img {
+        height: 250px;
+    }
+
+    .about-me {
+        width: 100%;
+        text-align: center;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 1024px) {
+    .big-text {
+        font-size: 64px;
+    }
+
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pfp img {
+        height: 300px;
+    }
+}
